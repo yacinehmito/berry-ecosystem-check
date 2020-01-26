@@ -64,9 +64,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@types/fs-extra", "npm:8.0.1"],
             ["@types/node", "npm:12.12.25"],
             ["@types/yargs", "npm:15.0.1"],
             ["@yarnpkg/pnpify", "virtual:d5409e5f8650706dd0993557a0bdc694de5905f70f73bb85524e91c6248fbb27aef91a7ff26e604a66321f504cca2f868e6232c9990aeb4fa99f7851739c89ce#npm:2.0.0-rc.16"],
+            ["fs-extra", "npm:8.1.0"],
             ["prettier", "npm:1.19.1"],
             ["typescript", "patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=226bd1"],
             ["yargs", "npm:15.1.0"]
@@ -79,6 +81,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-color-name-npm-1.1.1-00b0925070-1.zip/node_modules/@types/color-name/",
           "packageDependencies": [
             ["@types/color-name", "npm:1.1.1"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["@types/fs-extra", [
+        ["npm:8.0.1", {
+          "packageLocation": "./.yarn/cache/@types-fs-extra-npm-8.0.1-1902e7dbc7-1.zip/node_modules/@types/fs-extra/",
+          "packageDependencies": [
+            ["@types/fs-extra", "npm:8.0.1"],
+            ["@types/node", "npm:12.12.25"]
           ],
           "linkType": "HARD"
         }]
@@ -183,9 +195,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["berry-ecosystem-check", "workspace:."],
+            ["@types/fs-extra", "npm:8.0.1"],
             ["@types/node", "npm:12.12.25"],
             ["@types/yargs", "npm:15.0.1"],
             ["@yarnpkg/pnpify", "virtual:d5409e5f8650706dd0993557a0bdc694de5905f70f73bb85524e91c6248fbb27aef91a7ff26e604a66321f504cca2f868e6232c9990aeb4fa99f7851739c89ce#npm:2.0.0-rc.16"],
+            ["fs-extra", "npm:8.1.0"],
             ["prettier", "npm:1.19.1"],
             ["typescript", "patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=226bd1"],
             ["yargs", "npm:15.1.0"]
@@ -327,6 +341,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"
         }]
       ]],
+      ["fs-extra", [
+        ["npm:8.1.0", {
+          "packageLocation": "./.yarn/cache/fs-extra-npm-8.1.0-197473387f-1.zip/node_modules/fs-extra/",
+          "packageDependencies": [
+            ["fs-extra", "npm:8.1.0"],
+            ["graceful-fs", "npm:4.2.3"],
+            ["jsonfile", "npm:4.0.0"],
+            ["universalify", "npm:0.1.2"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
       ["fs.realpath", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-1.zip/node_modules/fs.realpath/",
@@ -356,6 +382,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimatch", "npm:3.0.4"],
             ["once", "npm:1.4.0"],
             ["path-is-absolute", "npm:1.0.1"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["graceful-fs", [
+        ["npm:4.2.3", {
+          "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.3-05a65851d1-1.zip/node_modules/graceful-fs/",
+          "packageDependencies": [
+            ["graceful-fs", "npm:4.2.3"]
           ],
           "linkType": "HARD"
         }]
@@ -403,6 +438,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/isexe-npm-2.0.0-b58870bd2e-1.zip/node_modules/isexe/",
           "packageDependencies": [
             ["isexe", "npm:2.0.0"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["jsonfile", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/jsonfile-npm-4.0.0-10ce3aea15-1.zip/node_modules/jsonfile/",
+          "packageDependencies": [
+            ["jsonfile", "npm:4.0.0"],
+            ["graceful-fs", "npm:4.2.3"]
           ],
           "linkType": "HARD"
         }]
@@ -622,6 +667,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/typescript-patch-fea84800fa-1.zip/node_modules/typescript/",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=226bd1"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["universalify", [
+        ["npm:0.1.2", {
+          "packageLocation": "./.yarn/cache/universalify-npm-0.1.2-9b22d31d2d-1.zip/node_modules/universalify/",
+          "packageDependencies": [
+            ["universalify", "npm:0.1.2"]
           ],
           "linkType": "HARD"
         }]

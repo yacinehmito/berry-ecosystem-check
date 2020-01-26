@@ -11,7 +11,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^12.12.25":
+"@types/fs-extra@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "@types/fs-extra@npm:8.0.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: eec793f6c7d73c3dedc88c727e0ba0639cb60fb9d40d381178b402131653dc81afe38ac7e08a7149cdd79db4074ae5e4780bb6c43202c355acc4ae48ab5e540e
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:*, @types/node@npm:^12.12.25":
   version: 12.12.25
   resolution: "@types/node@npm:12.12.25"
   checksum: 2bc6bd1139551e403c9c00e002bbe66a7771084b68eb1c38ee9077aa13689e20c097a7c7fdb08adf6a1245863cd363d8d66d2b3fe6f00ae1ae3b3cf539827f73
@@ -100,9 +109,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "berry-ecosystem-check@workspace:."
   dependencies:
+    "@types/fs-extra": ^8.0.1
     "@types/node": ^12.12.25
     "@types/yargs": ^15.0.1
     "@yarnpkg/pnpify": ^2.0.0-rc.16
+    fs-extra: ^8.1.0
     prettier: ^1.19.1
     typescript: ^3.7.5
     yargs: ^15.1.0
@@ -226,6 +237,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "fs-extra@npm:8.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: fe173c88b1daa8f1e26001fd55c0a659087b5507ca2f8188ee3ae01d090f0c44d083fe6b56414d5fe744cd3414570aab4dfed884c05f6a91cdddd3d9084cc3f6
+  languageName: node
+  linkType: hard
+
 "fs.realpath@npm:^1.0.0":
   version: 1.0.0
   resolution: "fs.realpath@npm:1.0.0"
@@ -251,6 +273,13 @@ __metadata:
     once: ^1.3.0
     path-is-absolute: ^1.0.0
   checksum: 1e4476a9b7a81eec0bcfee78de4c27a40d2bde349eb04a63c58636acf8dc5ad8c68bc47c841bf7de5fde22696b1d2a737ada65e66c2359a0b3195fafc1316814
+  languageName: node
+  linkType: hard
+
+"graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0":
+  version: 4.2.3
+  resolution: "graceful-fs@npm:4.2.3"
+  checksum: ed0570de762f98ddeaff67a54375d9869eda6ac5fd0c55e1783ce13fbf8ed3c6f1243bc459a7c848d20a916e20985c0c80a544f18a2a9a14ab8dee4a77285fcd
   languageName: node
   linkType: hard
 
@@ -289,6 +318,18 @@ __metadata:
   version: 2.0.0
   resolution: "isexe@npm:2.0.0"
   checksum: 1f6f7ccf6206a544097e27f04018fbd4fdb45d71eadac305d4b60cc18668d35c970d3c0bfadc4b348dd603d5536496a5634dd5f64792ea5e745c62cbc0ce9730
+  languageName: node
+  linkType: hard
+
+"jsonfile@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "jsonfile@npm:4.0.0"
+  dependencies:
+    graceful-fs: ^4.1.6
+  dependenciesMeta:
+    graceful-fs:
+      optional: true
+  checksum: a90ca8a5bde33b9ff0ce4bf5a6a5f6c418cdf50af218b8719e3a49f7804e98b7552717ab7eb4870684673529dee42b12e3a22753facda1baca40960b4ab14a52
   languageName: node
   linkType: hard
 
@@ -491,6 +532,13 @@ typescript@^3.7.5:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: de497e57cffec3ddf3cd6b7e96d62aaeaad18fccee70e8f63bea194210578e74d0c2ec2c1471851c91ce6c2030cca3ce35cf7d10beb2c016de3724e182935333
+  languageName: node
+  linkType: hard
+
+"universalify@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "universalify@npm:0.1.2"
+  checksum: d42e93c813408da203add373e208b4ee98a68dfa8832b84a9f116babf7610637cf569d20964d23227b4a7ad960477ae78144b4b119b999442813957b8cedabcc
   languageName: node
   linkType: hard
 
