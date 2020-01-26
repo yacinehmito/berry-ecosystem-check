@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build",
+    "strict": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es2017",
+    "incremental": true
+  },
+  "include": ["src/"]
+}

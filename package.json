@@ -1,0 +1,26 @@
+{
+  "name": "berry-ecosystem-check",
+  "private": true,
+  "description": "Check that packages in the ecosystem work well with yarn v2 (i.e. berry)",
+  "homepage": "https://github.com/yacinehmito/berry-ecosystem-check#README.md",
+  "license": "MIT",
+  "author": "Yacine Hmito <yacine.hmito@gmail.com>",
+  "bin": {
+    "my-bin": "./bin/berry-ecosystem-check.js"
+  },
+  "scripts": {
+    "berry-ecosystem-check": "node ./bin/berry-ecosystem-check.js",
+    "build": "tsc",
+    "clear": "rm -rf ./build ./tsconfig.tsbuildinfo",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.25",
+    "@types/yargs": "^15.0.1",
+    "@yarnpkg/pnpify": "^2.0.0-rc.16",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5",
+    "yargs": "^15.1.0"
+  }
+}
+
