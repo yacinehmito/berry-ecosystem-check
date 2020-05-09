@@ -36,8 +36,9 @@ const { argv } = yargs
       const { fetchDependedPackages } = await import('./depended');
       const { check } = await import('./check');
       const page = args._[1] as any as number || 0;
-      for (const pkg of await fetchDependedPackages(page)) {
-        console.log(`Will check package ${pkg}`);
+      const pkgs = await fetchDependedPackages(page);
+      for (const [i, pkg] of pkgs.entries()) {
+        console.log(`Will check package ${pkg} (${i + 1}/${pkgs.length})`);
         const result = await check(pkg, 'yarn');
         console.log(result);
       }

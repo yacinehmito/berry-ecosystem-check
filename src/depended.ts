@@ -12,5 +12,10 @@ export async function fetchDependedPackages(page: number): Promise<string[]> {
     },
   );
   const data = await response.json();
-  return data.packages.map((pkg: { name: string }) => pkg.name);
+  try {
+    return data.packages.map((pkg: { name: string }) => pkg.name);
+  } catch (error) {
+    console.error(data);
+    throw error;
+  }
 }

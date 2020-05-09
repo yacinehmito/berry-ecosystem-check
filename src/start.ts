@@ -18,7 +18,7 @@ export async function start(
   });
   return new Promise((resolve) => {
     yarnProcess.once('close', () => {
-      resolve('hello');
+      resolve('done');
     });
   });
 }
