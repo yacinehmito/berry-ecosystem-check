@@ -27,8 +27,8 @@ const templates: FileTemplate[] = [
         },
         dependencies: {
           [name]: '*',
+          ...peerDependencies,
         },
-        peerDependencies,
       };
       return JSON.stringify(packageJson, null, 2);
     },

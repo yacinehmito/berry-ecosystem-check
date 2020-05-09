@@ -17,10 +17,12 @@ export async function install(
   });
   const yarnMessages: YarnMessage[] = [];
   yarnProcess.stdout.on('data', (data) => {
-    const yarnMessage = readYarnMessage(data.toString('utf8'));
-    if (yarnMessage) {
-      yarnMessages.push(yarnMessage);
-    }
+    const yarnMessages = data
+      .toString('utf8')
+      .split('\n')
+      .map(readYarnMessage)
+      .filter(Boolean);
+    yarnMessages.push(...yarnMessages);
   });
   yarnProcess.stderr.on('data', (data) => {
     console.error(data.toString('utf8'));
@@ -32,11 +34,18 @@ export async function install(
   });
 }
 
+function parseJson(str: string): any {
+  try {
+    return str ? JSON.parse(str) : undefined;
+  } catch (error) {
+    console.error('Could not parse JSON');
+    throw error;
+  }
+}
+
 function readYarnMessage(messageStr: string): YarnMessage | undefined {
-  const messageObject: { name: unknown; data: unknown } = JSON.parse(
-    messageStr,
-  );
-  if (!messageObject.name) {
+  const messageObject: { name: unknown; data: unknown } = parseJson(messageStr);
+  if (!messageObject || !messageObject.name) {
     return undefined;
   }
   if (typeof messageObject.name !== 'number') {

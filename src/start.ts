@@ -2,7 +2,7 @@ import { join as joinPath } from 'path';
 import * as cp from 'child_process';
 import { resolveTmpDirectory } from './common';
 
-export async function run(
+export async function start(
   packageName: string,
   yarnCommand: string,
 ): Promise<string> {
